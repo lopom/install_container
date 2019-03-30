@@ -314,9 +314,9 @@ do
                                 then
                                         install_nginx_letsencrypt $chemin_3
                                 else
+					rm -rf $2/docker-compose.yml
                                         put_header $chemin_2
-                                        rm -rf $2/docker-compose.yml
-                                        install_nginx_letsencrypt $chemin_3
+				install_nginx_letsencrypt $chemin_3
                                 fi
                         else
                                 put_header $chemin_2
